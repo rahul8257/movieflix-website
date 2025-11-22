@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — MovieFlix Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand" onclick="location.href='index.html'">
+      <div class="logo">MF</div>
+      <div class="brand-text">
+        <div class="title">MovieFlix</div>
+        <div class="tag">Demo</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="admin.html">Admin</a>
+    </div>
+  </header>
+
+  <main class="auth-page container">
+    <div class="auth-card">
+      <h2 id="authTitle">Login</h2>
+
+      <label>Email</label>
+      <input id="authEmail" type="email" placeholder="you@example.com">
+
+      <label>Password</label>
+      <input id="authPwd" type="password" placeholder="password">
+
+      <div style="display:flex;gap:8px;margin-top:12px;">
+        <button class="btn-primary" onclick="loginDemo()">Login</button>
+        <button class="btn" onclick="signupDemo()">Signup</button>
+      </div>
+
+      <p class="muted" style="margin-top:12px;">यह केवल client-side demo है — कोई असली auth नहीं।</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Demo site • केवल प्रदर्शनीय प्रयोजन。
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

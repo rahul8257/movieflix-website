@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — MovieFlix Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand" onclick="location.href='index.html'">
+      <div class="logo">MF</div>
+      <div class="brand-text">
+        <div class="title">MovieFlix</div>
+        <div class="tag">Demo</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="login.html">Login</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="admin panel">
+      <h2>Admin Panel — Demo</h2>
+      <p class="muted">यह UI-only है — data localStorage में सेव होता है।</p>
+
+      <div class="admin-form">
+        <input id="aTitle" placeholder="Title">
+        <input id="aYear" placeholder="Year">
+        <input id="aGenre" placeholder="Genre">
+        <input id="aImg" placeholder="Image URL (optional)">
+        <textarea id="aDesc" placeholder="Short description"></textarea>
+        <div style="display:flex;gap:8px;">
+          <button class="btn-primary" onclick="adminAddMovie()">Add Movie</button>
+          <button class="btn" onclick="resetSample()">Reset Sample Data</button>
+          <button class="btn" onclick="clearAll()">Clear All</button>
+        </div>
+      </div>
+
+      <h3 style="margin-top:18px">Current Movies</h3>
+      <div id="adminList" class="admin-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Admin (Demo) • No backend.
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

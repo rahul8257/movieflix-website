@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MovieFlix — Demo (HTML)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand" onclick="location.href='index.html'">
+      <div class="logo">MF</div>
+      <div class="brand-text">
+        <div class="title">MovieFlix</div>
+        <div class="tag">Demo</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <input id="searchInput" class="search" placeholder="Search movies or year...">
+      <select id="categorySelect" class="select-category">
+        <option>All</option>
+        <option>Action</option>
+        <option>Comedy</option>
+        <option>Thriller</option>
+        <option>Documentary</option>
+        <option>Romance</option>
+        <option>Sci-Fi</option>
+        <option>Indie</option>
+      </select>
+      <a class="link" href="login.html">Login</a>
+      <a class="link" href="admin.html">Admin</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="heroSection">
+      <img id="heroImg" class="hero-img" src="https://via.placeholder.com/400x600?text=Featured" alt="Featured">
+      <div class="hero-body">
+        <h1 id="heroTitle">Featured Demo Movie</h1>
+        <p id="heroDesc">यह एक फीचरड डेमो फिल्म है — केवल प्रदर्शन के लिए।</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="playDemo()">Play</button>
+          <button class="btn" onclick="addToList()">Add to List</button>
+        </div>
+        <div class="hero-meta" id="heroMeta">Genre: Demo • Year: 2024</div>
+      </div>
+    </section>
+
+    <section class="results-bar">
+      <div id="resultsCount">Showing 0 results</div>
+    </section>
+
+    <section id="moviesGrid" class="grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    Demo site • कोई भी वास्तविक फिल्म/स्ट्रीम यहाँ नहीं। Trailers के लिए official sources का उपयोग करें。
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden" onclick="closeModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <img id="modalImg" src="" alt="" class="modal-img">
+      <h3 id="modalTitle"></h3>
+      <p id="modalGenre" class="muted"></p>
+      <p id="modalDesc"></p>
+      <div style="display:flex;gap:8px;margin-top:12px;">
+        <button class="btn-primary" onclick="playDemo()">Watch Demo</button>
+        <button class="btn" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
